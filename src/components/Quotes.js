@@ -8,13 +8,13 @@ function Quotes() {
     useEffect(() => {
       
         axios.request("https://animechan.vercel.app/api/quotes").then(function(response){
-            console.log(response.data);
-            setquotes(response.data);
+            console.log(response.data)
+            setquotes(response.data)
         }).catch(function(error){
-            console.log(error);
+            console.log(error)
         })
     
-    }, []);
+    }, [])
   return (
     
     <div>
@@ -22,12 +22,12 @@ function Quotes() {
       <div>
       {
         quotes.map(quote => 
-        <Quote key={quote.id} quotes={quote} />
+        <Quote key={quote.id} quote={quote} />
         )
       }
       </div>
     </div>
-  );
+  )
 }
 
 export default Quotes;
